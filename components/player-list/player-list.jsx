@@ -6,11 +6,13 @@ const PlayerListFeature = () => {
   const playerList = usePlayerList();
 
   return (
-      <div className={styles["player-list"]}>
-        <div className={styles["grid-container"]}>
-          {playerList.map(({name, id}) =><PlayerListItem id={id} name={name}></PlayerListItem>)}
-        </div>
+    <div className={styles['player-list']}>
+      <div className={styles['grid-container']}>
+        {playerList.map(({ name, id }) => (
+          <PlayerListItem key={id} id={id} name={name}></PlayerListItem>
+        ))}
       </div>
+    </div>
   );
 };
 
