@@ -1,0 +1,86 @@
+.app-header {
+  background-color: #000000;
+  height: 220px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 44px 48px 0px;
+
+  a, p {
+    margin: 0px;
+    line-height: 18px;
+    font-size: 16px;
+    text-decoration-line: underline;
+    text-decoration-color: white; 
+  }
+  
+  hr {
+
+    flex-direction: column;
+    width: 50px;
+    width: 100%;
+    height: 0px;
+    border-width: 1px 0px 0px 0px;
+    border-style: solid;
+    border-color: #ffffff;
+  }
+ 
+  .header-left {
+    width: 25%;
+    background-color: black;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    
+    .navigation-left {
+      display: flex;
+      justify-content: space-between;
+      color : white; 
+    }
+    .player-info{
+      color:white;
+      
+      display: flex;
+      margin:0;
+    }
+   
+  }
+
+  .header-center {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-right {
+    width: 25%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+ 
+    .navigation-right {
+      width: 100%;
+      display: flex;
+      margin: 0px;
+      text-align: end;
+      flex-direction: column;
+      color:white;  
+    
+      }     
+      .navigation-right1 {
+      width: 100%;
+      display: flex;
+      margin: 0px;
+      text-align: end;
+      vertical-align: middle;
+      flex-direction: column;
+      color:white;   
+      height: 73px;
+    }
+ 
+  }
+
+}
