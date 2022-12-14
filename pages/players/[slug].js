@@ -51,7 +51,7 @@ export const getStaticProps = async ({ params }) => {
 };
 
 const Player = ({ player }) => {
-  if (!player) return; //ovde moze shimer da ide ili neki loader
+  //if (!player) return; //ovde moze shimer da ide ili neki loader
   console.log("player :>> ", player);
 
   return (
