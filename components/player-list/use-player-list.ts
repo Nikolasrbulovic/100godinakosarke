@@ -2,121 +2,134 @@ const usePlayerList = () => {
     return [
         {
             id: 1,
-            name:  "Dejan Bodiroga",
+            name:  "Dejan Bodiroga1",
         },
         {
             id: 2,
-            name:  "ŽARKO VARAJIĆ",
+            name:  "ŽARKO VARAJIĆ2",
         },        {
             id: 3,
-            name:  "ALEKSANDAR GEC",
+            name:  "ALEKSANDAR GEC3",
         },        {
             id: 4,
-            name:  "SLOBODAN GORDIĆ",
+            name:  "SLOBODAN GORDIĆ4",
         },        {
             id: 5,
-            name:  "MILAN GUROVIĆ",
+            name:  "MILAN GUROVIĆ5",
         },        {
             id: 6,
-            name:  "DRAŽEN DALIPAGIĆ",
+            name:  "DRAŽEN DALIPAGIĆ6",
         },        {
             id: 7,
-            name:  "PREDRAG DANILOVIĆ",
+            name:  "PREDRAG DANILOVIĆ7",
         },        {
             id: 8,
-            name:  "Dejan Bodiroga",
-        },        {
-            id: 9,
-            name:  "VLADE DIVAC",
-        },        {
-            id: 4,
-            name:  "SLOBODAN GORDIĆ",
-        },        {
-            id: 5,
-            name:  "MILAN GUROVIĆ",
-        },        {
-            id: 6,
-            name:  "DRAŽEN DALIPAGIĆ",
-        },        {
-            id: 7,
-            name:  "PREDRAG DANILOVIĆ",
-        },        {
-            id: 8,
-            name:  "Dejan Bodiroga",
-        },        {
-            id: 9,
-            name:  "VLADE DIVAC",
-        },,        {
-            id: 4,
-            name:  "SLOBODAN GORDIĆ",
-        },        {
-            id: 5,
-            name:  "MILAN GUROVIĆ",
-        },        {
-            id: 6,
-            name:  "DRAŽEN DALIPAGIĆ",
-        },        {
-            id: 7,
-            name:  "PREDRAG DANILOVIĆ",
-        },        {
-            id: 8,
-            name:  "Dejan Bodiroga",
-        },        {
-            id: 9,
-            name:  "VLADE DIVAC",
-        },,        {
-            id: 4,
-            name:  "SLOBODAN GORDIĆ",
-        },        {
-            id: 5,
-            name:  "MILAN GUROVIĆ",
-        },        {
-            id: 6,
-            name:  "DRAŽEN DALIPAGIĆ",
-        },        {
-            id: 7,
-            name:  "PREDRAG DANILOVIĆ",
-        },        {
-            id: 8,
-            name:  "Dejan Bodiroga",
-        },        {
-            id: 9,
-            name:  "VLADE DIVAC",
+            name:  "Dejan Bodiroga8",
         },
-        ,        {
+        {
+            id: 1,
+            name:  "Dejan Bodiroga1",
+        },
+        {
+            id: 2,
+            name:  "ŽARKO VARAJIĆ2",
+        },        {
+            id: 3,
+            name:  "ALEKSANDAR GEC3",
+        },        {
             id: 4,
-            name:  "SLOBODAN GORDIĆ",
+            name:  "SLOBODAN GORDIĆ4",
         },        {
             id: 5,
-            name:  "MILAN GUROVIĆ",
+            name:  "MILAN GUROVIĆ5",
         },        {
             id: 6,
-            name:  "DRAŽEN DALIPAGIĆ",
+            name:  "DRAŽEN DALIPAGIĆ6",
         },        {
             id: 7,
-            name:  "PREDRAG DANILOVIĆ",
+            name:  "PREDRAG DANILOVIĆ7",
         },        {
             id: 8,
-            name:  "Dejan Bodiroga",
+            name:  "Dejan Bodiroga8",
+        },
+        {
+            id: 1,
+            name:  "Dejan Bodiroga1",
+        },
+        {
+            id: 2,
+            name:  "ŽARKO VARAJIĆ2",
         },        {
-            id: 9,
-            name:  "VLADE DIVAC",
-        },,        {
+            id: 3,
+            name:  "ALEKSANDAR GEC3",
+        },        {
             id: 4,
-            name:  "SLOBODAN GORDIĆ",
+            name:  "SLOBODAN GORDIĆ4",
         },        {
             id: 5,
-            name:  "MILAN GUROVIĆ",
+            name:  "MILAN GUROVIĆ5",
         },        {
             id: 6,
-            name:  "DRAŽEN DALIPAGIĆ",
+            name:  "DRAŽEN DALIPAGIĆ6",
         },        {
             id: 7,
-            name:  "PREDRAG DANILOVIĆ",
+            name:  "PREDRAG DANILOVIĆ7",
         },        {
             id: 8,
-            name:  "Dejan Bodiroga",
-        },       
+            name:  "Dejan Bodiroga8",
+        },
+        {
+            id: 1,
+            name:  "Dejan Bodiroga1",
+        },
+        {
+            id: 2,
+            name:  "ŽARKO VARAJIĆ2",
+        },        {
+            id: 3,
+            name:  "ALEKSANDAR GEC3",
+        },        {
+            id: 4,
+            name:  "SLOBODAN GORDIĆ4",
+        },        {
+            id: 5,
+            name:  "MILAN GUROVIĆ5",
+        },        {
+            id: 6,
+            name:  "DRAŽEN DALIPAGIĆ6",
+        },        {
+            id: 7,
+            name:  "PREDRAG DANILOVIĆ7",
+        },        {
+            id: 8,
+            name:  "Dejan Bodiroga8",
+        },
+        {
+            id: 1,
+            name:  "Dejan Bodiroga1",
+        },
+        {
+            id: 2,
+            name:  "ŽARKO VARAJIĆ2",
+        },        {
+            id: 3,
+            name:  "ALEKSANDAR GEC3",
+        },        {
+            id: 4,
+            name:  "SLOBODAN GORDIĆ4",
+        },        {
+            id: 5,
+            name:  "MILAN GUROVIĆ5",
+        },        {
+            id: 6,
+            name:  "DRAŽEN DALIPAGIĆ6",
+        },        {
+            id: 7,
+            name:  "PREDRAG DANILOVIĆ7",
+        },        {
+            id: 8,
+            name:  "Dejan Bodiroga8",
+        },
 
     ]
 }

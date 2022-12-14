@@ -10,6 +10,6 @@
       <path id="Path_5" data-name="Path 5" d="M222.975,498.153c.492-.4.711-2.524,1.332-2.825.594-.289,0,0,.533-.258s1.419.792,2.109.7c1.018-.14,1.3-.236,1.765-1.211.614-1.3,3.909-8.857,4.473-8.909.022.055.582-1.789,1.468-3.743H215.579v-52.9h-29.2l-22.75,7.286v23.7l22.75-7.286v29.2H159.957v21.86h56.786C216.475,501.459,222.383,498.639,222.975,498.153Z" fill="#cba46d"/>
       <path id="Path_6" data-name="Path 6" d="M238.5,488.816c-1.432,1.457-3.831,4.107-4.369,4.661-.627.645-.824,1.609-1.342,2.146.364.331-1,2.34-1.344,2.886.374-.592.749,1.127.756,1.181.149,1.044.187,2.075.416,3.115a1.654,1.654,0,0,1-.016.959h7.559V486.576A9.187,9.187,0,0,0,238.5,488.816Z" fill="#cba46d"/>
     </g>
-    <text id="GODINA_KOŠARKE" data-name="GODINA KOŠARKE" transform="translate(297.486 548.117)" fill="#fff" font-size="28px" font-family="Helvetica-Regular, Helvetica" ><tspan x="-130" y="0">GODINA KOŠARKE</tspan></text>
+    <text id="GODINA_KOŠARKE" data-name="GODINA KOŠARKE" transform="translate(297.486 548.117)" fill="#fff" font-size="40px" letter-spacing="56px" font-family="Mouzambik" letter-spacing="2.34"><tspan x="-90" y="0">GODINA KOŠARKE</tspan></text>
   </g>
 </svg>

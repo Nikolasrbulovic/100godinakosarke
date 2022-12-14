@@ -1,10 +1,11 @@
+@import '../../styles/variables.scss';
+
 .app-header {
   background-color: #000000;
-  height: 220px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  height: $header-height;
+  width: 100%;
   padding: 44px 48px 0px;
+  font: normal normal normal 16px/18px Helvetica Neue;
 
   a, p {
     margin: 0px;
@@ -24,63 +25,65 @@
     border-style: solid;
     border-color: #ffffff;
   }
- 
-  .header-left {
-    width: 25%;
-    background-color: black;
+  .container {
+    flex-direction: row;
     justify-content: space-between;
     display: flex;
-    flex-direction: column;
-    
-    .navigation-left {
-      display: flex;
+    .header-left {
+      width: 25%;
+      background-color: black;
       justify-content: space-between;
-      color : white; 
-    }
-    .player-info{
-      color:white;
+      display: flex;
+      flex-direction: column;
       
-      display: flex;
-      margin:0;
+      .navigation-left {
+        display: flex;
+        justify-content: space-between;
+        color : white; 
+      }
+      .player-info{
+        color:white;
+        
+        display: flex;
+        margin:0;
+      }
+     
     }
+  
+    .header-center {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .header-right {
+      width: 25%;
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      
    
-  }
-
-  .header-center {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .header-right {
-    width: 25%;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
- 
-    .navigation-right {
-      width: 100%;
-      display: flex;
-      margin: 0px;
-      text-align: end;
-      flex-direction: column;
-      color:white;  
-    
-      }     
-      .navigation-right1 {
-      width: 100%;
-      display: flex;
-      margin: 0px;
-      text-align: end;
-      vertical-align: middle;
-      flex-direction: column;
-      color:white;   
-      height: 73px;
+      .navigation-right {
+        width: 100%;
+        display: flex;
+        margin: 0px;
+        text-align: end;
+        flex-direction: column;
+        color:white;  
+      
+        }     
+        .navigation-right1 {
+        width: 100%;
+        display: flex;
+        margin: 0px;
+        text-align: end;
+        vertical-align: middle;
+        flex-direction: column;
+        color:white;   
+        height: 73px;
+      }
     }
- 
   }
-
 }

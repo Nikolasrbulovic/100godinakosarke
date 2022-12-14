@@ -1,0 +1,7 @@
+@import '../../variables.scss';
+
+.container{
+    background-color: black;
+    height: calc(100vh - $header-height);
+    width: auto;
+}

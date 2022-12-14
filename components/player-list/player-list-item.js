@@ -16,7 +16,6 @@ const PlayerListItem = (props) => {
   return (
     <div
       className={styles["grid-item"]}
-      style={textStyle}
       key={props.id}
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
@@ -26,7 +25,9 @@ const PlayerListItem = (props) => {
           <Basketball />
         </div>
       )}
-      <div className={styles.name}>{props.name}</div>
+      <div className={styles.name} style={textStyle}>
+        {props.name}
+      </div>
     </div>
   );
 };
