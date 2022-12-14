@@ -8,7 +8,7 @@ const AppHeader = ({ backButtonComponent }) => (
       <div className={styles["header-left"]}>
         <div className={styles["navigation-left"]}>
           <Link href={""}> Pocetna stranica </Link>
-          <Link href={""}> O projektu </Link>
+          <Link href="/about"> O projektu </Link>
         </div>
         <div className="navigation-right">
           <hr className="line"></hr>
