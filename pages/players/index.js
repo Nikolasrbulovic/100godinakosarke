@@ -22,7 +22,7 @@ export async function getStaticProps() {
 }
 
 const PlayerList = ({ players }) => {
-  console.log("players :>> ", props.players);
+  console.log("players :>> ", players);
   //rutiranje ide preko slug-a npr /players/aleksandar-sale-nacionale-djordjevic
   return (
     <div className={styles.container}>
