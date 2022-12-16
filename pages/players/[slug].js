@@ -73,7 +73,26 @@ const Player = ({ player }) => {
               <span className={styles.nickname}> - SALE NACIONALE</span>
             </h1>
             <h1 className={styles["last-name"]}>ĐORĐEVIĆ</h1>
-            <p className={styles["stats"]}>stats</p>
+            <div className={styles["stats"]}>
+              <div className={styles["stats-content"]}>
+                <div className={styles["title"]}>ROĐEN: </div>
+                <div className={styles["text"]}>
+                  26. AVGUSTA 1967. U BEOGRADU
+                </div>
+              </div>
+              <div className={styles["stats-content"]}>
+                <div className={styles["title"]}>ULOGA: </div>
+                <div className={styles["text"]}>IGRAC/TRENER</div>
+              </div>
+              <div className={styles["stats-content"]}>
+                <div className={styles["title"]}>VISINA: </div>
+                <div className={styles["text"]}>188cm</div>
+              </div>
+              <div className={styles["stats-content"]}>
+                <div className={styles["title"]}>POZICIJA/IGRAC </div>
+                <div className={styles["text"]}>PLEJMEJKER</div>
+              </div>
+            </div>
           </div>
           <div className={styles["rewards-list"]}>
             <div className={styles.reward}>
@@ -95,6 +114,14 @@ const Player = ({ player }) => {
                 <div className={styles["number"]}>1x</div>
                 <div className={styles["text"]}>Najbolji igrač EP (1997)</div>
               </div>
+            </div>
+            <div className={styles["arrow-down"]}>
+              <Image
+                width={10}
+                height={143}
+                src="/arrow-down.png"
+                alt="arrow"
+              ></Image>
             </div>
           </div>
         </div>
