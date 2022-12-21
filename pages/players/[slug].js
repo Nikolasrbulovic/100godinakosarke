@@ -110,9 +110,9 @@ const Player = ({ player }) => {
               <Image
                 width={10}
                 height={143}
-                src="/arrow-down.png"
+                src="/Arrow-Down.png"
                 alt="arrow"
-              ></Image>
+              />
             </div>
           </div>
         </div>
