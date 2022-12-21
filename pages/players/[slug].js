@@ -1,12 +1,11 @@
-import { useRouter } from "next/router";
 import { createClient } from "contentful";
 import AppHeader from "../../components/app-header/app-header";
 import HeaderBackButton from "../../components/header-back-button/header-back-button";
 import styles from "../../styles/pages/players/[slug]/[slug].module.scss";
 import Image from "next/image";
 import Icon1 from "../../images/trophy.svg";
-import Icon2 from "../../images/medal.svg";
-//import Player from "../../components/player-list/player-list";
+// import Icon2 from "../../images/medal.svg";
+import useWindowSize from '../../hooks/use-window-size';
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -51,28 +50,29 @@ export const getStaticProps = async ({ params }) => {
 };
 
 const Player = ({ player }) => {
-  //if (!player) return; //ovde moze shimer da ide ili neki loader
-  console.log("player :>> ", player);
+  const size = useWindowSize();
 
+  if (!player) return; //ovde moze shimer da ide ili neki loader
+  console.log("player :>> ", player);
   return (
     <div className={styles.player}>
       <div className={styles.main}>
         <div className={styles["basic-info"]}>
-          <h3 className={styles["full-name"]}>Aleksandar DJORDJEVIC</h3>
+          <h3 className={styles["full-name"]}><span>{player.fields.name.toLowerCase()}</span> {player.fields.lastname}</h3>
           <div className={styles["info"]}>
             <div className={styles.photo}>
               <Image
-                width={600}
-                height={600}
-                src="/sale-nacionale.png"
+                width={Math.round(player.fields.playersImage.fields.file.details.image.width * ((size.width / 2 ) / 1920))}
+                height={Math.round(player.fields.playersImage.fields.file.details.image.height * ((size.width / 2 ) / 1920))}
+                src={`https:${player.fields.playersImage.fields.file.url}`}
                 alt="Sale"
-              ></Image>
+              />
             </div>
             <h1 className={styles["first-name"]}>
-              ALEKSANDAR
-              <span className={styles.nickname}> - SALE NACIONALE</span>
+              {player.fields.name}
+              <span className={styles.nickname}> - {player.fields.nickname}</span>
             </h1>
-            <h1 className={styles["last-name"]}>ĐORĐEVIĆ</h1>
+            <h1 className={styles["last-name"]}>{player.fields.lastname}</h1>
             <div className={styles["stats"]}>
               <div className={styles["stats-content"]}>
                 <div className={styles["title"]}>ROĐEN: </div>
@@ -95,26 +95,17 @@ const Player = ({ player }) => {
             </div>
           </div>
           <div className={styles["rewards-list"]}>
-            <div className={styles.reward}>
-              <div className={styles["reward-golden"]}>
-                <div className={styles["icon"]}>
-                  <Icon1></Icon1>
-                </div>
-                <div className={styles["number"]}>2x</div>
-                <div className={styles["text"]}>
-                  Igrač godine u Evropi (1994, 1995)
-                </div>
+            {player.fields.awards.map(award => (
+              <div key={award.id} className={styles.reward}>
+                  <div className={styles["icon"]}>
+                    <Icon1 />
+                  </div>
+                  <div className={styles["number"]}>{award.key}</div>
+                  <div className={styles["text"]}>
+                    {award.value}
+                  </div>
               </div>
-            </div>
-            <div className={styles.reward}>
-              <div>
-                <div className={styles["icon"]}>
-                  <Icon2></Icon2>
-                </div>
-                <div className={styles["number"]}>1x</div>
-                <div className={styles["text"]}>Najbolji igrač EP (1997)</div>
-              </div>
-            </div>
+            ))}
             <div className={styles["arrow-down"]}>
               <Image
                 width={10}
@@ -125,85 +116,98 @@ const Player = ({ player }) => {
             </div>
           </div>
         </div>
-      </div>
-      <div className={styles["achievement-list"]}>
-        <div className={styles["achievement-item"]}>
-          <p className={styles.text}>
-            Jedina ličnost u istoriji košarke – finalista svih Velikih
-            takmičenja i kao igrač i kao trener
-          </p>
-          <p className={styles.number}>1</p>
-        </div>
-        <div className={styles["achievement-item"]}>
-          <p className={styles.text}>
-            Jedna od 50 najzaslužnijih ličnosti u prvih 50 godina Evrolige
-            (1958-2008)
-          </p>
-          <p className={styles.number}>1</p>
-        </div>
-        <div className={styles["achievement-item"]}>
-          <p className={styles.text}>
-            Meča u reprezentaciji Jugoslavije (89 pobeda-15 poraza)
-          </p>
-          <p className={styles.number}>1</p>
-        </div>
-        <div className={styles["achievement-item"]}>
-          <p className={styles.text}>Poena za reprezentaciju:</p>
-          <p className={styles.number}>937</p>
+          <div className={styles["achievement-list"]}>
+            {player.fields.statistics.map(statistic => (
+              <div key={statistic.key} className={styles["achievement-item"]}>
+                <p className={styles.text}>
+                  {statistic.key}
+                </p>
+              <p className={styles.number}>{statistic.value}</p>
+            </div>
+            ))}
+            {/* ovde su klase za poene za reprezentaciju, treba ih oznaciti u podacima */}
+            {/* <div className={clsx(styles["achievement-item"], styles["achievement-item--representation"])}>
+              <p className={styles.text}>Poena za reprezentaciju:</p>
+              <p className={styles.number}>937</p>
+            </div> */}
         </div>
       </div>
       <div className={styles["trainer-quote"]}>
         <div className={styles["trainer-photo"]}>
-          <Image width={274} height={274} src="/121.png" alt="Sale"></Image>
+          <Image 
+            width={274}
+            height={274} 
+            src={`https:${player.fields.testimonialImage.fields.file.url}`} alt="Sale"
+          />
         </div>
         <div className={styles["quote-text"]}>
           <p>
-            „BILO JE ZADOVOLJSTVO GLEDATI GA, JER ON JE OLIČENJE OVE IGRE, JEDAN
-            OD NAJBOLJIH EVROPSKIH PLEJMEJKERA SVIH VREMENA. ON IMA KOŠARKAŠKI
-            GEN U SEBI, ON VIDI DRUGAČIJE STVARI OD OSTALIH. NJEGOVA MISIJA NA
-            TERENU JE – POBEDA! I PREMA TOME SE PONAŠA ILI KAO ORGANIZATOR IGRE
-            ILI KAO UBOJIT STRELAC“.
+            {player.fields.testimonialText}
           </p>
         </div>
         <div className={styles["trainer-name"]}>
-          <p>Dan Peterson, trener</p>
+          <p>{player.fields.testimonialName}</p>
         </div>
       </div>
-      <div className={styles["player-video"]}>
-        <Image width={1920} height={857} src="/sale4.png" alt="jokic"></Image>
+       <div className={styles["player-video"]}>
+        <Image width={size.width} height={size.width / 2.24} src="/sale4.png" alt="jokic"></Image>
       </div>
       <div className={styles["player-description"]}>
         <div className={styles["player-info"]}>
-          <div className={styles["title"]}>
-            KOŠARKAŠKI UMETNIK I KILLER U JEDNOM
-          </div>
-          <div className={styles["text"]}>
-            Aleksandar Đorđević je jedinstvena ličnost u istoriji košarke: niko
-            osim njega nije učestvovao u finalima sva tri najveća međunarodna
-            takmičenja (svetska i evropska prvenstva, olimpijske igre) i kao
-            igrač i kao trener. Rođeni pobednik - tako su ga opisivali mnogi
-            hroničari košarke i kolumnisti, veličajući njegovu harizmu, hrabrost
-            i sve ostale vrline velikog vođe na terenu. Majstor suptilne
-            komunikacije, vrhunski profesor motivacije, zakleti protivnik
-            alibija! Tako ga opisuju danas, kada kao trener nastavlja svoj
-            košarkaši put. Ostao je upamćen kao jedan od najboljih evropskih
-            plejmejkera svih vremena, savršene tehnike, besprekornog šuta i
-            neverovatnog osećaja za igru, tako da je u svakom timu bio
-            „produžena ruka trenera“.
+          <div>
+            {player.fields.descriptionText.content.map(data => (
+              <div key="key">
+              {data.nodeType === "heading-1" ?
+                  <>
+                  {data.content.map(details => (
+                    <h1 className={styles["title"]} key="key">
+                      {details.value}
+                    </h1>
+                  ))}
+                  </>
+                 : <>
+                  {data.content.map(details => (
+                  <p key="key" className={styles["text"]}>
+                      {details.value}
+                  </p>
+                  ))}
+                </>
+                }
+              </div>
+            ))}
           </div>
         </div>
         <div className={styles["image"]}>
-          <Image width={960} height={727} src="/sale1.png" alt="sale"></Image>
+          <Image 
+            width={Math.round(player.fields.descriptionImage.fields.file.details.image.width * ((size.width) / 1920))} 
+            height={Math.round(player.fields.descriptionImage.fields.file.details.image.height * ((size.width) / 1920))} 
+            src={`https:${player.fields.descriptionImage.fields.file.url}`} alt="sale"
+          />
         </div>
       </div>
       <div className={styles["player-carier"]}>
         <div className={styles["image"]}>
-          <Image width={506} height={838} src="/sale2.png" alt="jokic"></Image>
+          <Image  
+            width={Math.round(player.fields.infoImage.fields.file.details.image.width * ((size.width) / 1920))} 
+            height={Math.round(player.fields.infoImage.fields.file.details.image.height * ((size.width) / 1900))}
+            src={`https:${player.fields.infoImage.fields.file.url}`} alt="jokic"
+          />
         </div>
         <div className={styles["text-container"]}>
           <div className={styles["container-up"]}>
             <div className={styles["container"]}>
-              <div className={styles["title"]}>KARIJERA / IGRAČ:</div>
+              {player.fields.infoText.content.map(data => (
+                <>
+                  {data.content.map(detail => (
+                    <>
+                    {data.nodeType === "heading-4" ? 
+                      <h4 className={styles["title"]}>{detail.value}</h4> : <p className={styles["text"]}>{detail.value}</p>
+                    }
+                    </>
+                  ))}
+                </>
+              ))}
+              {/* <div className={styles["title"]}>KARIJERA / IGRAČ:</div>
               <div className={styles["text"]}>PARTIZAN (1982-1992)</div>
               <div className={styles["text"]}>FILIPS MILANO (1992-1994)</div>
               <div className={styles["text"]}>PORTLAND TRAILBLAZERS (1996)</div>
@@ -212,9 +216,9 @@ const Player = ({ player }) => {
               <div className={styles["text"]}>ARMANI MILANO (2005)</div>
               <div className={styles["text"]}>
                 REPREZENTACIJA JUGOSLAVIJA (1987-1998)
-              </div>
+              </div> */}
             </div>
-            <div className={styles["container"]}>
+            {/* <div className={styles["container"]}>
               <div className={styles["title"]}>NAJVECI USPESI / IGRAČ:</div>
               <div className={styles["text"]}>KUP ŠAMPIONA 1992</div>
               <div className={styles["text"]}>
@@ -239,9 +243,9 @@ const Player = ({ player }) => {
               <div className={styles["text"]}>
                 OLIMPIJSKE IGRE – SREBRNA 1996
               </div>
-            </div>
+            </div> */}
           </div>
-          <div className={styles["container-up"]}>
+          {/* <div className={styles["container-up"]}>
             <div className={styles["container"]}>
               <div className={styles["title"]}>KARIJERA / TRENER:</div>
               <div className={styles["text"]}>ARMANI MILANO (2006/2007)</div>
@@ -271,9 +275,10 @@ const Player = ({ player }) => {
               <div className={styles["text"]}>PRVENSTVO ITALIJE 2021</div>
               <div className={styles["text"]}>PARTIZAN (1982-1992)</div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
+      
       <div className={styles["galery-container"]}>
         <div className={styles.title}>
           <h2>GALERIJA</h2>
@@ -296,16 +301,17 @@ const Player = ({ player }) => {
               alt="jokic"
             ></Image>
           </div>
-          <div className={styles["photo"]}>
+          {/* <div className={styles["photo"]}>
             <Image
               width={542}
               height={542}
               src="/jokic.png"
               alt="jokic"
             ></Image>
-          </div>
+          </div> */}
         </div>
-      </div>
+      </div> 
+     
     </div>
   );
 };
