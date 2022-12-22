@@ -1,18 +1,15 @@
 .button {
-    
-    display: flex;
-    max-width: 268px;
-    height: 73px;
-    color : white;
-  
-    .arrow{
-      width:40%;
-     }
-   .tittle{
+  display: flex;
+  max-width: 268px;
+  height: 73px;
+  color: white;
+  font-size: 16px;
+  .arrow {
+    width: 40%;
+  }
+  .tittle {
     vertical-align: top;
     text-align: left;
-    width:60%;
-    
-   
-   }
+    width: 60%;
   }
+}

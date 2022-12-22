@@ -15,13 +15,17 @@
     justify-content: space-between;
     width: 100%;
     .basic-info {
+      height: calc(100vh - $header-height);
       display: flex;
       justify-content: space-between;
       flex-direction: column;
       width: 100%;
-      height: 100%;
+      //height: 100%;
       .full-name {
-        padding-left: 3%;
+        font-family: Helvetica;
+        font-size: 1.1vw;
+        padding-left: 3.5%;
+        padding-top: 2%;
         color: white;
         margin: 0;
         span {
@@ -142,8 +146,8 @@
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        font-size: 15px;
-        padding: 30px 45px;
+        font-size: 0.9vw;
+        padding: 2% 3%;
         flex-grow: 1;
         width: 25%;
         border: 1px solid rgba(255, 255, 255, 0.25);
@@ -167,7 +171,7 @@
     }
   }
   .trainer-quote {
-    padding-top: 100px;
+    padding-top: 6%;
     .trainer-photo {
       position: absolute;
       z-index: 1;

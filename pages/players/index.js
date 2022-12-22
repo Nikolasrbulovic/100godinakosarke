@@ -35,7 +35,7 @@ PlayerList.getLayout = (page) => (
   <>
     <AppHeader
       backButtonComponent={
-        <HeaderBackButton buttonTitle="Pocetna stranica" href="/" />
+        <HeaderBackButton buttonTitle="Pocetna stranica" href="/" golden="false" />
       }
     />
     {page}

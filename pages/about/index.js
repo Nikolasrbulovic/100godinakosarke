@@ -28,7 +28,7 @@ const AboutPage = () => (
     </div>
     <div className={styles["text-container"]}>
       <div className={styles["photo"]}>
-        <Image width={783} height={888} src="/about1.png" alt="about"></Image>
+        <Image width={883} height={958} src="/about1.png" alt="about"></Image>
       </div>
       <div className={styles["text"]}>
         <div className={styles["title"]}>SFRJ, SRJ, SRBIJA</div>
@@ -108,7 +108,11 @@ const AboutPage = () => (
     </div>
     <div className={styles["video-container-body"]}>
       <div className={styles["text"]}>
-        <div className={styles["title"]}>NOVI POČETAK</div>
+        <div className={styles["title"]}>
+          NOVI <br />
+          POČETAK
+          <br />
+        </div>
         <div className={styles["description-container"]}>
           <div className={styles["vertical-line"]}></div>
           <div className={styles["description"]}>
@@ -138,7 +142,11 @@ AboutPage.getLayout = (page) => (
   <>
     <AppHeader
       backButtonComponent={
-        <HeaderBackButton buttonTitle="Pocetna stranica" href="/" />
+        <HeaderBackButton
+          buttonTitle="Pocetna stranica"
+          href="/"
+          golden="false"
+        />
       }
     />
     {page}
