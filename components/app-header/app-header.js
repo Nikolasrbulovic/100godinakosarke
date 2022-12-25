@@ -10,7 +10,7 @@ const AppHeader = ({ backButtonComponent }) => {
       <div className={styles["container"]}>
         <div className={styles["header-left"]}>
           <div className={styles["navigation-left"]}>
-            <Link href={""}> Pocetna stranica </Link>
+            <Link href={""}> Početna stranica </Link>
             <Link href="/about"> O projektu </Link>
           </div>
           <div className="navigation-right">

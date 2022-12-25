@@ -15,7 +15,7 @@ const PlayerListItem = (props) => {
     color: isShown ? "#CBA46D" : "white",
   };
   return (
-    <Link href="/players/aleksandar-sale-nacionale-djordjevic">
+
       <div
         className={styles["grid-item"]}
         key={props.id}
@@ -27,11 +27,13 @@ const PlayerListItem = (props) => {
             <Basketball />
           </div>
         )}
+        <Link href="/players/aleksandar-sale-nacionale-djordjevic">
         <div className={styles.name} style={textStyle}>
           {props.name}
         </div>
+        </Link>
+
       </div>
-    </Link>
   );
 };
 export default PlayerListItem;

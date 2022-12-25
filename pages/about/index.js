@@ -3,12 +3,17 @@ import AppHeader from "../../components/app-header/app-header";
 import HeaderBackButton from "../../components/header-back-button/header-back-button";
 import styles from "../../styles/pages/about/about.module.scss";
 import Image from "next/image";
+import SvgBackground from "../../images/about-background.svg";
 const AboutPage = () => (
   <div className={styles.main}>
     <div className={styles["project-info"]}>
       <div className={styles["content"]}>
         <div className={styles["text"]}>
-          <div className={styles["title"]}>PROJEKAT 100 za 100</div>
+          <div className={styles["title"]}>
+            PROJEKAT <br />
+            100 za 100
+            <br />
+          </div>
           <div className={styles["description-container"]}>
             <div className={styles["vertical-line"]}></div>
             <div className={styles["description"]}>
@@ -27,8 +32,15 @@ const AboutPage = () => (
       </div>
     </div>
     <div className={styles["text-container"]}>
-      <div className={styles["photo"]}>
-        <Image width={883} height={958} src="/about1.png" alt="about"></Image>
+      <div>
+        <img
+          className={styles["decoration-doodle-first"]}
+          src="/basket_dodle_last.png"
+          alt="about"
+        ></img>
+      </div>
+      <div className={styles["photo-container"]}>
+        <img className={styles["photo"]} src="/about1.png" alt="about"></img>
       </div>
       <div className={styles["text"]}>
         <div className={styles["title"]}>SFRJ, SRJ, SRBIJA</div>
@@ -51,13 +63,12 @@ const AboutPage = () => (
       </div>
     </div>
     <div className={styles["video-container-body"]}>
-      <div className={styles["decoration-doodle-second"]}>
-        <Image
-          width={300}
-          height={380}
+      <div>
+        <img
+          className={styles["decoration-doodle-second"]}
           src="/basket_dodle2.png"
           alt="about"
-        ></Image>
+        ></img>
       </div>
       <div className={styles["text"]}>
         <div className={styles["title"]}>DIGITALNA PREZENTACIJA</div>
@@ -78,16 +89,15 @@ const AboutPage = () => (
       <div className={styles["video"]}>video</div>
     </div>
     <div className={styles["text-container"]}>
-      <div className={styles["decoration-doodle-third"]}>
-        <Image
-          width={500}
-          height={600}
+      <div>
+        <img
+          className={styles["decoration-doodle-third"]}
           src="/basket_dodle3.png"
           alt="about"
-        ></Image>
+        ></img>
       </div>
       <div className={styles["photo-last"]}>
-        <Image width={783} height={888} src="/about2.png" alt="about"></Image>
+        <img className={styles["photo"]} src="/about2.png" alt="about"></img>
       </div>
       <div className={styles["text"]}>
         <div className={styles["title"]}>ZEMLJA TERENA ZA BASKET</div>
@@ -107,6 +117,13 @@ const AboutPage = () => (
       </div>
     </div>
     <div className={styles["video-container-body"]}>
+      <div>
+        <img
+          className={styles["decoration-doodle-last"]}
+          src="/basket_dodle_last.png"
+          alt="about"
+        ></img>
+      </div>
       <div className={styles["text"]}>
         <div className={styles["title"]}>
           NOVI <br />
@@ -125,14 +142,6 @@ const AboutPage = () => (
           </div>
         </div>
       </div>
-      <div className={styles["decoration-doodle-last"]}>
-        <Image
-          width={400}
-          height={338}
-          src="/basket_dodle_last.png"
-          alt="about"
-        ></Image>
-      </div>
       <div className={styles["video"]}>video</div>
     </div>
   </div>
@@ -142,11 +151,7 @@ AboutPage.getLayout = (page) => (
   <>
     <AppHeader
       backButtonComponent={
-        <HeaderBackButton
-          buttonTitle="Pocetna stranica"
-          href="/"
-          golden="false"
-        />
+        <HeaderBackButton buttonTitle="" href="/" withArrow={false} />
       }
     />
     {page}

@@ -1,3 +1,25 @@
+.disabled-link {
+  pointer-events: none;
+  display: flex;
+  .button {
+    display: flex;
+    height: 73px;
+    color: white;
+    font-size: 16px;
+    .arrow {
+      width: 40%;
+    }
+    .title {
+      display: flex;
+      flex-direction: row !important;
+      vertical-align: top;
+      text-align: left;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+    }
+  }
+}
 .button {
   display: flex;
   max-width: 268px;
@@ -5,9 +27,11 @@
   color: white;
   font-size: 16px;
   .arrow {
-    width: 40%;
+    width: 35%;
   }
-  .tittle {
+  .title {
+    display: flex;
+    flex-direction: row !important;
     vertical-align: top;
     text-align: left;
     width: 60%;

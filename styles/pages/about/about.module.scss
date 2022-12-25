@@ -16,19 +16,11 @@
     height: 100%;
     align-items: center;
     .text {
+      height: 100%;
       display: flex;
       flex-direction: column;
       width: 50%;
-      //height: 100%;
-      align-self: end;
-      .title {
-        padding-bottom: 22px;
-        text-align: left;
-        font: normal normal normal 13vw Mouzambik;
-        letter-spacing: 4.4px;
-        color: #cba46d;
-        line-height: 240px;
-      }
+      align-self: flex-end;
       .description-container {
         display: flex;
         flex-direction: row;
@@ -36,14 +28,8 @@
         padding-top: 5%;
         padding-bottom: 7%;
         .vertical-line {
-          border: 5px solid #cba46d;
+          border: 3px solid #cba46d;
           height: 79px;
-        }
-        .description {
-          font: normal normal normal 0.9vw Helvetica;
-          letter-spacing: 0.42px;
-          padding-left: 5%;
-          padding-right: 20%;
         }
       }
     }
@@ -63,13 +49,22 @@
   .video-container-head,
   .video-container-body,
   .text-container {
-    padding-top: 5%;
+    padding-top: 10%;
     position: relative;
     display: flex;
     height: calc(100vh - $header-height);
-    .decoration-doodle-last {
+    .decoration-doodle-first {
       position: absolute;
-      right: 30%;
+      width: 23vw;
+      left: 38vw;
+      top: 40px;
+      transform: rotate(155deg);
+    }
+    .decoration-doodle-last {
+      width: 22vw;
+      position: absolute;
+      right: 43%;
+      top: -30px;
       z-index: 1;
     }
     .decoration-doodle-third {
@@ -77,25 +72,27 @@
       left: -2%;
       top: 35%;
       z-index: 1;
+      width: 30vw;
     }
     .decoration-doodle-second {
       position: absolute;
-      left: 40%;
+      width: 16vw;
+      left: 36%;
       top: -15%;
     }
     .text {
       z-index: 2;
-      padding: 3% 5% 5% 7%;
+      padding: 3% 5% 5% 9%;
       flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
       .title {
-        line-height: 200px !important;
+        line-height: 90% !important;
         width: 100%;
         padding-bottom: 22px;
         text-align: left;
-        font: normal normal normal 10vw Mouzambik;
+        font: normal normal normal 8vw Mouzambik;
         letter-spacing: 4.4px;
         color: #cba46d;
       }
@@ -103,10 +100,10 @@
         display: flex;
         flex-direction: row;
         padding-left: 15%;
-        font: normal normal normal 0.9vw Helvetica;
+        font: normal normal normal 0.7vw Helvetica;
         letter-spacing: 0.52px;
         .vertical-line {
-          border: 5px solid #cba46d;
+          border: 3px solid #cba46d;
           height: 79px;
         }
         .description {
@@ -119,14 +116,18 @@
       flex: 1;
       font-display: flex;
     }
-    .photo {
-      padding-left: 5%;
+    //ss
+    .photo-container {
+      padding-left: 3%;
       mix-blend-mode: luminosity;
       opacity: 0.65;
       width: 50%;
       justify-content: end;
       position: relative;
       top: 87%;
+      .photo {
+        width: 45vw;
+      }
     }
     .photo-last {
       mix-blend-mode: luminosity;
@@ -136,6 +137,27 @@
       position: relative;
       top: 83%;
       left: 12%;
+      .photo {
+        width: 45vw;
+      }
     }
   }
+}
+
+.description {
+  font: normal normal normal 0.7vw/1vw Helvetica;
+  letter-spacing: 0.42px;
+  padding-left: 5%;
+  padding-right: 20%;
+}
+
+.title {
+  display: flex;
+  align-items: end;
+  height: 100%;
+  text-align: left;
+  font: normal normal normal 11vw Mouzambik;
+  letter-spacing: 4.4px;
+  color: #cba46d;
+  line-height: 90%;
 }
