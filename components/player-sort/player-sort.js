@@ -25,7 +25,9 @@ const PlayerSort = (props) => {
   return (
     <div className={styles["letter-selection"]}>
       {"ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map((letter) => (
-        <button onClick={() => handleLetterClick(letter)}>{letter}</button>
+        <button key={letter} onClick={() => handleLetterClick(letter)}>
+          {letter}
+        </button>
       ))}
     </div>
   );
