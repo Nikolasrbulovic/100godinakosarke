@@ -35,7 +35,7 @@ const AboutPage = () => (
       <div>
         <img
           className={styles["decoration-doodle-first"]}
-          src="/basket_dodle_last.png"
+          src="/Basket_Dodle_last.png"
           alt="about"
         ></img>
       </div>
@@ -66,7 +66,7 @@ const AboutPage = () => (
       <div>
         <img
           className={styles["decoration-doodle-second"]}
-          src="/basket_dodle2.png"
+          src="/Basket_Dodle2.png"
           alt="about"
         ></img>
       </div>
@@ -92,7 +92,7 @@ const AboutPage = () => (
       <div>
         <img
           className={styles["decoration-doodle-third"]}
-          src="/basket_dodle3.png"
+          src="/Basket_Dodle3.png"
           alt="about"
         ></img>
       </div>
@@ -120,7 +120,7 @@ const AboutPage = () => (
       <div>
         <img
           className={styles["decoration-doodle-last"]}
-          src="/basket_dodle_last.png"
+          src="/Basket_Dodle_last.png"
           alt="about"
         ></img>
       </div>
