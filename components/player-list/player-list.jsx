@@ -23,7 +23,7 @@ const PlayerListFeature = ({players}) => {
       </div>
       <PlayerSort players={playerList} setSortByLetter={setSortByLetter} sortByLetter={sortByLetter} />
       <div className={styles["hover-photo"]}>
-        <img src={"/korac.png"}></img>
+        <img src={"/korac.jpg"}></img>
       </div>
     </div>
   );
