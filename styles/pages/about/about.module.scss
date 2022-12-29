@@ -19,7 +19,7 @@
       height: 100%;
       display: flex;
       flex-direction: column;
-      width: 45%;
+      width: 55%;
       align-self: flex-end;
 
       .svg {
@@ -45,7 +45,12 @@
     }
 
     .video {
-      width: 50vw;
+      padding-bottom: 5%;
+      align-self: flex-end;
+      position: relative;
+      right: 0vw;
+      width: 40vw;
+      margin-right: -10vw;
     }
   }
 

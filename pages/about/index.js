@@ -36,7 +36,7 @@ AboutPage.getLayout = (page) => {
         />
       )}
       {page}
-      {windowSize ? <AppFooterMobile /> : <AppFooterDesktop />}
+      {windowSize < 480 ? <AppFooterMobile /> : <AppFooterDesktop />}
     </>
   );
 };
