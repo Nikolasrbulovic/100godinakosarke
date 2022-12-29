@@ -6,6 +6,7 @@ import AppHeaderMobile from "../../components/app-header-mobile/app-header-mobil
 import AboutPageMobile from "../../components/about-page-mobile/about-page-mobile";
 import AboutPageDesktop from "../../components/about-page-desktop/about-page-desktop";
 import AppFooterMobile from "../../components/app-footer-mobile/app-footer-mobile";
+import AppFooter from "../../components/app-footer/app-footer";
 const AboutPage = () => {
   const size = useWindowSize();
   if (size.width < 480) {
@@ -16,27 +17,15 @@ const AboutPage = () => {
 };
 
 AboutPage.getLayout = (page) => {
-  let windowSize = 1920;
-  if (typeof window !== "undefined") {
-    windowSize = window?.innerWidth;
-  }
   return (
     <>
-      {windowSize < 480 ? (
-        <AppHeaderMobile
-          backButtonComponent={
-            <HeaderBackButton buttonTitle="Lista igraca" href="/players" />
-          }
-        />
-      ) : (
-        <AppHeader
-          backButtonComponent={
-            <HeaderBackButton buttonTitle="Lista igraca" href="/players" />
-          }
-        />
-      )}
+      <AppHeader
+        backButtonComponent={
+          <HeaderBackButton buttonTitle="Lista igraca" href="/players" />
+        }
+      />
       {page}
-      {windowSize < 480 ? <AppFooterMobile /> : <AppFooterDesktop />}
+      <AppFooter />
     </>
   );
 };

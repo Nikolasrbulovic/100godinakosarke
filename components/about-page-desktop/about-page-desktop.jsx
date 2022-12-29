@@ -29,10 +29,12 @@ const AboutPageDesktop = () => {
           </div>
         </div>
         <video
-          className={styles["video"]}
-          controls
-          src="/digitalna_prezentacija.mp4"
+            className={styles["video"]}
+            controls
+            src="/100_za_100.mp4"
+
         />
+
       </div>
     </div>
     <div className={styles["text-container"]}>
@@ -92,7 +94,11 @@ const AboutPageDesktop = () => {
           </div>
         </div>
       </div>
-      <video className={styles["video"]} controls src="/novi_pocetak.mp4" />
+      <video
+          className={styles["video"]}
+          controls
+          src="/digitalna_prezentacija.mp4"
+        />
     </div>
     <div className={styles["text-container"]}>
       <div>

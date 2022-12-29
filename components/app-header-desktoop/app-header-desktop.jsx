@@ -1,8 +1,8 @@
-import styles from "./app-header.module.scss";
+import styles from "./app-header-desktop.module.scss";
 import Link from "next/link";
 import Logo from "../../images/Logo.svg";
 
-const AppHeader = ({ backButtonComponent }) => {
+const AppHeaderDesktop = ({ backButtonComponent }) => {
   return (
     <div className={styles["app-header"]}>
       <div className={styles["container"]}>
@@ -37,4 +37,4 @@ const AppHeader = ({ backButtonComponent }) => {
   );
 };
 
-export default AppHeader;
+export default AppHeaderDesktop;

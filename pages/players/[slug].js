@@ -1,12 +1,12 @@
 import { createClient } from "contentful";
-import AppHeader from "../../components/app-header/app-header";
-import AppHeaderMobile from "../../components/app-header-mobile/app-header-mobile";
 import HeaderBackButton from "../../components/header-back-button/header-back-button";
 import PlayerMobile from "../../components/player-overview-mobile/player-overview-mobile";
 import useWindowSize from "../../hooks/use-window-size";
 import AppFooterMobile from "../../components/app-footer-mobile/app-footer-mobile";
 import PlayerDesktop from "../../components/player-overview-desktop/player-overview-desktop";
 import AppFooterDesktop from "../../components/app-footer-desktop/app-footer-desktop";
+import AppHeader from "../../components/app-header/app-header";
+import AppFooter from "../../components/app-footer/app-footer";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -62,27 +62,15 @@ const Player = ({ player }) => {
 };
 
 Player.getLayout = (page) => {
-  let windowSize = 1920;
-  if (typeof window !== "undefined") {
-    windowSize = window.innerWidth;
-  }
   return (
     <>
-      {windowSize < 480 ? (
-        <AppHeaderMobile
-          backButtonComponent={
-            <HeaderBackButton buttonTitle="Lista igraca" href="/players" />
-          }
-        />
-      ) : (
-        <AppHeader
-          backButtonComponent={
-            <HeaderBackButton buttonTitle="Lista igraca" href="/players" />
-          }
-        />
-      )}
+      <AppHeader
+        backButtonComponent={
+          <HeaderBackButton buttonTitle="Lista igraca" href="/players" />
+        }
+      />
       {page}
-      {windowSize < 480 ? <AppFooterMobile /> : <AppFooterDesktop />}
+      <AppFooter />
     </>
   );
 };
