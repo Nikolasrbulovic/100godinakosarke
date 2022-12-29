@@ -1,16 +1,14 @@
 import styles from "./app-header.module.scss";
 import Link from "next/link";
 import Logo from "../../images/Logo.svg";
-import useWindowSize from "../../hooks/use-window-size";
 
 const AppHeader = ({ backButtonComponent }) => {
-  const size = useWindowSize();
   return (
     <div className={styles["app-header"]}>
       <div className={styles["container"]}>
         <div className={styles["header-left"]}>
           <div className={styles["navigation-left"]}>
-            <Link href={""}> Početna stranica </Link>
+            <Link href={"/"}> Početna stranica </Link>
             <Link href="/about"> O projektu </Link>
           </div>
           <div className="navigation-right">
@@ -19,13 +17,13 @@ const AppHeader = ({ backButtonComponent }) => {
           {backButtonComponent}
         </div>
         <div className={styles["header-center"]}>
-          <div className="logo">
+          <div className={styles["logo"]}>
             <Logo></Logo>
           </div>
         </div>
         <div className={styles["header-right"]}>
           <div className={styles["navigation-right"]}>
-            <Link href={""}> Kosarkaski savez srbije </Link>
+            <Link href={"https://kss.rs/"}> Kosarkaski savez srbije </Link>
           </div>
           <div className={styles["navigation-right"]}>
             <hr className="line"></hr>

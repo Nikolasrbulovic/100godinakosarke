@@ -1,0 +1,289 @@
+.player {
+  .main {
+    display: flex;
+    flex-direction: column;
+    padding-left: 8%;
+    .rewards-list {
+      display: flex;
+      flex-direction: row;
+      z-index: 2;
+      padding-bottom: 3%;
+      .reward {
+        height: 25vw;
+        width: 25vw;
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        text-align: center;
+        margin-right: 0px;
+        background-color: #cba46d;
+        .number {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 4vw;
+        }
+        .text {
+          font-family: Helvetica;
+          font-size: 3vw;
+          text-overflow: ellipsis;
+          word-wrap: break-word;
+          overflow: hidden;
+          max-width: 100px;
+        }
+      }
+    }
+    .info {
+      .photo {
+        position: absolute;
+        color: transparent;
+        right: -2%;
+        top: 27%;
+        height: 80vw;
+      }
+      .first-name {
+        text-align: center;
+        font-family: Helvetica;
+        font-size: 3vw;
+        letter-spacing: 1.8px;
+        color: #ffffff;
+        opacity: 1;
+      }
+      .last-name {
+        height: 40%;
+        margin: 0;
+        text-align: left;
+        font-weight: normal;
+        font-size: 30vw;
+        font-family: Mouzambik;
+        letter-spacing: 0px;
+        color: #cba46d;
+        opacity: 1;
+        margin-top: -2vw;
+      }
+      .nickname {
+        text-align: center;
+        font-family: Helvetica;
+        font-size: 3vw;
+        letter-spacing: 1.8px;
+        color: #ffffff;
+        opacity: 0.5;
+        font-style: italic;
+      }
+    }
+    .stats {
+      display: flex;
+      width: 100%;
+      margin-top: -7vw;
+      padding-bottom: 8%;
+      justify-content: center;
+      flex-direction: column;
+      .stats-bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .stats-content {
+        padding-top: 4%;
+        padding-right: 5%;
+        font-family: Helvetica;
+        font-size: 3vw;
+        .title {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+  .achievement-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    //padding-bottom: 6%;
+    //height: 100px;
+    width: 100%;
+    > :last-child {
+      background-color: #cba46d;
+      z-index: 3;
+    }
+    .achievement-item {
+      display: flex;
+
+      flex-direction: row;
+      font-size: 2.5vw;
+      padding: 2% 3%;
+
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      -webkit-background-clip: padding-box; /* for Safari */
+      background-clip: padding-box;
+      .text {
+        padding-left: 1%;
+        align-self: center;
+        text-align: left;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        overflow: hidden;
+        max-width: 35vw;
+        margin-right: 15px;
+      }
+      .number {
+        padding-right: 1%;
+        align-self: center;
+        font: normal normal bold 4vw Helvetica;
+        text-decoration: none;
+      }
+    }
+  }
+  .arrow-down {
+    position: relative;
+    width: 1.7vw;
+    padding-bottom: 8%;
+    left: 49.5%;
+    //padding-top: 2%;
+    img {
+      width: 1.7vw;
+      height: 15vw;
+    }
+  }
+  .trainer-quote {
+    padding-top: 5%;
+    position: relative;
+    .trainer-photo {
+      position: absolute;
+      z-index: 1;
+      right: 39%;
+      top: -3%;
+      img {
+        width: 23vw;
+        height: 23vw;
+      }
+    }
+    .quote-text {
+      position: relative;
+      z-index: 2;
+      padding: 5% 8% 5%;
+      font-family: Mouzambik;
+      font-size: 10vw;
+      text-align: center;
+      p {
+        margin: 0px;
+        color: white;
+      }
+    }
+    .trainer-name {
+      text-align: center;
+      font-family: Helvetica;
+      font-size: 3vw;
+      letter-spacing: 0px;
+      color: #ffffff;
+      opacity: 0.5;
+    }
+  }
+  .player-video {
+    //width: 100%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    img {
+      width: 100vw;
+    }
+  }
+  .player-description {
+    padding-bottom: 10%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    .player-info {
+      padding-left: 8%;
+      padding-top: 10%;
+      padding-right: 8%;
+      flex: 1;
+      .title {
+        color: #cba46d;
+        text-align: left;
+        font: normal normal normal 12vw/12vw Mouzambik;
+        padding-right: 2vw;
+        margin-bottom: 6%;
+        margin-top: 0;
+      }
+      .text {
+        text-align: left;
+        font: normal normal normal 3vw/5vw Helvetica;
+        letter-spacing: -0.32px;
+        color: #ffffff;
+        opacity: 1;
+      }
+    }
+    .image {
+      position: relative;
+      padding-left: 8%;
+      img {
+        width: 92vw;
+      }
+    }
+  }
+
+  .text-container {
+    display: flex;
+    width: 100%;
+    padding-left: 10%;
+    padding-bottom: 10%;
+    flex-direction: column;
+
+    .container-up {
+      display: flex;
+      flex-direction: column;
+      .image {
+        width: 100%;
+        img {
+          mix-blend-mode: luminosity;
+          opacity: 0.65;
+          width: 92vw;
+        }
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-right: 5vw;
+        flex: 1;
+        padding-bottom: 5%;
+
+        .title {
+          padding-top: 7%;
+          padding-bottom: 4%;
+          margin: 0;
+          text-align: left;
+          font: normal normal normal 9vw/11vw Mouzambik;
+          letter-spacing: 0.8px;
+          color: #cba46d;
+        }
+        .text {
+          margin: 0;
+          text-align: left;
+          font: normal normal normal 3.4vw/6vw Helvetica;
+          letter-spacing: 0.3vw;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  .galery-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5% 10%;
+    .title {
+      height: 8vw/8vw;
+      h2 {
+        letter-spacing: 1.4px;
+        margin: 0;
+        height: 75px;
+      }
+      font: normal normal normal 60px/70px Mouzambik;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+}

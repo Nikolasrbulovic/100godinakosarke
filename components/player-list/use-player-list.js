@@ -33,132 +33,124 @@ const usePlayerList = () => {
       name: "Dejan Bodiroga",
     },
     {
-      id: 7,
+      id: 9,
       name: "PREDRAG DANILOVIĆ",
     },
     {
-      id: 8,
+      id: 10,
       name: "Dejan Bodiroga",
     },
     {
-      id: 1,
+      id: 11,
       name: "Dejan Bodiroga",
     },
     {
-      id: 2,
+      id: 12,
       name: "ŽARKO VARAJIĆ",
     },
     {
-      id: 3,
+      id: 13,
       name: "ALEKSANDAR GEC",
     },
     {
-      id: 4,
+      id: 14,
       name: "SLOBODAN GORDIĆ",
     },
     {
-      id: 5,
+      id: 15,
       name: "MILAN GUROVIĆ",
     },
     {
-      id: 6,
+      id: 16,
       name: "DRAŽEN DALIPAGIĆ",
     },
     {
-      id: 7,
+      id: 17,
       name: "PREDRAG DANILOVIĆ",
     },
     {
-      id: 8,
+      id: 18,
       name: "Dejan Bodiroga",
     },
     {
-      id: 1,
+      id: 19,
       name: "Dejan Bodiroga",
     },
     {
-      id: 2,
+      id: 20,
       name: "ŽARKO VARAJIĆ",
     },
     {
-      id: 3,
+      id: 21,
       name: "ALEKSANDAR GEC",
     },
     {
-      id: 4,
+      id: 22,
       name: "SLOBODAN GORDIĆ",
     },
     {
-      id: 5,
+      id: 23,
       name: "MILAN GUROVIĆ",
     },
     {
-      id: 6,
+      id: 24,
       name: "DRAŽEN DALIPAGIĆ",
     },
     {
-      id: 7,
+      id: 25,
       name: "PREDRAG DANILOVIĆ",
     },
     {
-      id: 8,
+      id: 26,
       name: "Dejan Bodiroga",
     },
     {
-      id: 8,
+      id: 27,
       name: "Dejan Bodiroga",
     },
     {
-      id: 1,
+      id: 28,
       name: "Dejan Bodiroga",
     },
     {
-      id: 2,
+      id: 29,
       name: "ŽARKO VARAJIĆ",
     },
     {
-      id: 3,
+      id: 30,
       name: "ALEKSANDAR GEC",
     },
     {
-      id: 4,
+      id: 31,
       name: "SLOBODAN GORDIĆ",
     },
     {
-      id: 5,
+      id: 32,
       name: "MILAN GUROVIĆ",
     },
     {
-      id: 6,
+      id: 33,
       name: "DRAŽEN DALIPAGIĆ",
     },
     {
-      id: 7,
+      id: 34,
       name: "PREDRAG DANILOVIĆ",
     },
     {
-      id: 8,
+      id: 35,
       name: "Dejan Bodiroga",
     },
     {
-      id: 8,
+      id: 36,
       name: "Dejan Bodiroga",
     },
     {
-      id: 1,
+      id: 37,
       name: "Dejan Bodiroga",
     },
     {
-      id: 2,
+      id: 38,
       name: "ŽARKO VARAJIĆ",
-    },
-    {
-      id: 3,
-      name: "ALEKSANDAR GEC",
-    },
-    {
-      id: 4,
-      name: "SLOBODAN GORDIĆ",
     },
   ];
 };

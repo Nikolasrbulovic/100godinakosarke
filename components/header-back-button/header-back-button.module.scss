@@ -1,33 +1,11 @@
-.disabled-link {
-  pointer-events: none;
-  display: flex;
-  .button {
-    display: flex;
-    height: 73px;
-    color: white;
-    font-size: 16px;
-    .arrow {
-      width: 40%;
-    }
-    .title {
-      display: flex;
-      flex-direction: row !important;
-      vertical-align: top;
-      text-align: left;
-      align-items: center;
-      justify-content: center;
-      flex: 1;
-    }
-  }
-}
 .button {
   display: flex;
   max-width: 268px;
   height: 73px;
   color: white;
-  font-size: 16px;
+  font-size: 1vw;
   .arrow {
-    width: 35%;
+    width: 33%;
   }
   .title {
     display: flex;
@@ -35,5 +13,14 @@
     vertical-align: top;
     text-align: left;
     width: 60%;
+  }
+}
+@media (max-width: 500px) {
+  .button {
+    height: 43px;
+    font-size: 3vw;
+    .arrow {
+      width: 30%;
+    }
   }
 }

@@ -1,22 +1,22 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .app-header {
   background-color: transparent;
   height: $header-height;
   width: 100%;
   padding: 44px 48px 0px;
-  font: normal normal normal 16px/18px Helvetica Neue;
+  font: normal normal normal 1vw Helvetica Neue !important;
 
-  a, p {
+  a,
+  p {
     margin: 0px;
     line-height: 18px;
-    font-size: 16px;
+    font-size: 1vw;
     text-decoration-line: underline;
-    text-decoration-color: white; 
+    text-decoration-color: white;
   }
-  
-  hr {
 
+  hr {
     flex-direction: column;
     width: 50px;
     width: 100%;
@@ -24,6 +24,7 @@
     border-width: 1px 0px 0px 0px;
     border-style: solid;
     border-color: #ffffff;
+    opacity: 0.7;
   }
   .container {
     flex-direction: row;
@@ -35,54 +36,61 @@
       justify-content: space-between;
       display: flex;
       flex-direction: column;
-      
+
       .navigation-left {
+        font: normal normal normal 1vw Helvetica Neue !important;
         display: flex;
         justify-content: space-between;
-        color : white; 
+        color: white;
       }
-      .player-info{
-        color:white;
-        
+      .player-info {
+        color: white;
+
         display: flex;
-        margin:0;
+        margin: 0;
       }
-     
     }
-  
+
     .header-center {
       width: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
+      .logo {
+        svg {
+          width: 15vw !important;
+        }
+      }
     }
-  
+
     .header-right {
       width: 25%;
       background-color: transparent;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      
-   
+
       .navigation-right {
         width: 100%;
         display: flex;
         margin: 0px;
         text-align: end;
         flex-direction: column;
-        color:white;  
-      
-        }     
-        .navigation-right1 {
+        color: white;
+      }
+      .navigation-right1 {
         width: 100%;
         display: flex;
         margin: 0px;
         text-align: end;
         vertical-align: middle;
         flex-direction: column;
-        color:white;   
+        color: white;
         height: 73px;
+        p {
+          text-decoration-line: none !important;
+          opacity: 0.7;
+        }
       }
     }
   }

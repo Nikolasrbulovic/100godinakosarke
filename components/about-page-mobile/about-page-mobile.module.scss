@@ -1,0 +1,98 @@
+.about {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - 173px);
+    padding: 50px 0 25px 0;
+}
+
+.description-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    .vertical-line {
+        border: 1.5px solid #cba46d;
+        height: 79px;
+      }
+
+    .description {
+        font: normal normal normal 4vw/5vw Helvetica;
+        letter-spacing: 0.42px;
+        padding-left: calc(10% - 1.5px);
+        padding-right: 10%;
+    }
+}   
+.title-big {
+    padding-left: 10%;
+    display: flex;
+    align-items: end;
+    text-align: left;
+    font: normal normal normal 25vw/30vw Mouzambik;
+    letter-spacing: 4.4px;
+    color: #cba46d;
+    line-height: 90%;
+    padding-bottom: 20px;
+}
+
+.title {
+    padding-left: 10%;
+    display: flex;
+    align-items: end;
+    height: 100%;
+    text-align: left;
+    font: normal normal normal 20vw/25vw Mouzambik;
+    letter-spacing: 4.4px;
+    color: #cba46d;
+    line-height: 90%;
+    padding-bottom: 20px;
+}
+
+.video {
+    display: flex;
+    padding: 20vw 0;
+    width: 100vw;
+}
+
+.photo {
+    width: 90vw;
+}
+
+.photo-container {
+    margin-top: 30px;
+}
+
+
+.decoration-doodle-first {
+    position: relative;
+    width: 40vw;
+    left: 50vw;
+    top: -50px;
+    transform: rotate(185deg);
+}
+
+.decoration-doodle-second {
+    position: relative;
+    left: 15%;
+    width: 30vw;
+}
+
+.decoration-doodle-third {
+    top: -50vw;
+    left: -5%;
+    position: relative;
+    width: 60vw;
+    transform: rotate(-45deg);
+    margin-bottom: -45vw;
+}
+
+.decoration-doodle-last {
+    position: relative;
+    width: 50vw;
+    left: 25vw;
+}
+

@@ -3,6 +3,7 @@ import HeaderBackButton from "../../components/header-back-button/header-back-bu
 import PlayerListFeature from "../../components/player-list/player-list";
 import { createClient } from "contentful";
 import PlayerSort from "../../components/player-sort/player-sort";
+import { useState } from "react";
 
 import styles from "../../styles/pages/players/index.module.scss";
 
